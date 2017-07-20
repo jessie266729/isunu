@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="keywords" content="前端,html,jquery,js,学习资料下载，案例下载"/>
+    <meta name="description" content="isunu是一个致力于前端学习的网站，涵盖html入门教学知识，css样式升华，js动态交互，jquery快捷开发，以及各类前端插件使用教学等等，还免费提供各种学习资料下载，案例下载功能，适合各类技术水平的前端人员使用，在此你还可以展现你的技术成果。"/>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="bookmark" href="../images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/learn.css"/>
+    <title>js动态交互</title>
+</head>
+<body>
+    <div class="content">
+        <h1>js动态交互</h1>
+        <div>
+            <h2>JavaScript：改变 HTML 内容</h2>
+
+            <p>使用 JavaScript 来处理 HTML 内容是非常强大的功能。</p>
+
+            <h3>实例</h3>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;我的第一段 JavaScript&lt;/h1&gt;
+
+&lt;p id="demo"&gt;
+    JavaScript 能改变 HTML 元素的内容。
+&lt;/p&gt;
+
+&lt;script&gt;
+    function myFunction()
+    {
+        x=document.getElementById("demo");  // 找到元素
+        x.innerHTML="Hello JavaScript!";    // 改变内容
+    }
+&lt;/script&gt;
+
+&lt;button type="button" onclick="myFunction()">点击这里&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+            <p>您会经常看到 document.getElementByID("<i>some id</i>")。这个方法是 HTML DOM 中定义的。</p>
+
+            <p>DOM（文档对象模型）是用以访问 HTML 元素的正式 W3C 标准。</p>
+
+            <p>您将在本教程的多个章节中学到有关 HTML DOM 的知识。</p>
+        </div>
+        <div>
+            <h2>JavaScript：改变 HTML 样式</h2>
+
+            <p>改变 HTML 元素的样式，属于改变 HTML 属性的变种。</p>
+
+            <h3>将以下代码写入&lt;script&gt;中&lt;/script&gt;</h3>
+
+<pre>x=document.getElementById("demo")  <span>//找到元素</span>
+x.style.color="#ff0000";           <span>//改变样式</span>
+</pre>
+        </div>
+        <div>
+            <h2>总结</h2>
+            <ol>
+                <li>获得该节点元素</li>
+                    <ul>
+                        <li>A.通过id获得：x=document.getElementById("demo");</li>
+                        <li>B.通过class获得：x=document.getElementByClassName("demo");</li>
+                        <li>C.通过节点获得：x=document.getElementByTagName("a");</li>
+                        <li>D.通过name标记的特性id值：x=document.getElementsByName("color");</li>
+                    </ul>
+                <li>对该元素节点进行操作</li>
+                    <ul>
+                        <li>A.增删改查节点等;</li>
+                    </ul>
+                <li>javascript(js)的引入方式</li>
+                    <ul>
+                        <li>A.放在html页面内：用&lt;script&gt;&lt;/script&gt;标签包起来;</li>
+                        <li>B.放在外部文件，在html引用：&lt;script scr="引入js文件路径"&gt;&lt;/script&gt;</li>
+                    </ul>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

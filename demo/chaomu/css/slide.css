@@ -1,0 +1,29 @@
+
+/* case */
+.case_box li{margin:0;padding:0;list-style-type:none;}
+.case{overflow:hidden;width:100%;margin:0 auto;}
+.case_box{position:relative;margin:0px;overflow:hidden}
+.case_box ul{position:absolute;overflow:hidden;top:0px;left:0px}
+.case_box ul li{float:left;}
+.case_box p{z-index:2;position:absolute;width:28px;height:51px;top:40%;cursor:pointer}
+
+.lejj-ol-slide-10 li,.lejj-ol-slide-11 li,.lejj-ol-slide-12 li{
+    background:url('../images/gray_yuan.png')
+}
+ .lejj-ol-slide-10 li.active2,.lejj-ol-slide-11 li.active2,.lejj-ol-slide-12 li.active2 {
+        background:url('../images/white_yuan.png')
+ }
+.case_box ol li{
+    float:left;
+    width:20px;
+    height:20px;
+    cursor:pointer;
+    margin-left:10px;
+    overflow:hidden;
+    background:white;
+    border-radius:20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial;
+}

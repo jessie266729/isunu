@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table-checkbox-number</title>
+    <link href="../plugin/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="add-body">
+<div class="add-area">
+    <div class="condition">
+        <label>开始时间</label>
+        <input class="easyui-datebox" style="width: 270px" name="begin-time"
+               data-options="required:false" value="">
+    </div>
+    <div class="condition">
+        <label>结束时间</label>
+        <input class="easyui-datebox" style="width: 270px" name="end-time"
+               data-options="required:false" value="">
+    </div>
+    <div class="condition">
+        <label>性别</label>
+        <input class="easyui-combobox"  style="width: 270px" data-options="url:'xb.json',valueField:'id',textField:'text',panelHeight:'auto'" />
+    </div>
+    <div class="condition">
+        <label>性别</label>
+        <input class="easyui-textbox"  style="width: 270px" data-options="" />
+    </div>
+</div>
+<div class="btn-area">
+    <div class="div-button" id="add_save">保存</div>
+    <div class="div-button" id="add_cancel">取消</div>
+</div>
+</body>
+</html>
+<script type="text/jscript" src="../plugin/jquery.min.js"></script>
+<script type="text/jscript" src="../plugin/jquery.easyui.min.js"></script>
+<script type="text/jscript" src="../plugin/easyui-lang-zh_CN.js"></script>
+<script src="../js/add_new_dialog.js"></script>

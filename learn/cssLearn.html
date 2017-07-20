@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="keywords" content="前端,html,jquery,js,学习资料下载，案例下载"/>
+    <meta name="description" content="isunu是一个致力于前端学习的网站，涵盖html入门教学知识，css样式升华，js动态交互，jquery快捷开发，以及各类前端插件使用教学等等，还免费提供各种学习资料下载，案例下载功能，适合各类技术水平的前端人员使用，在此你还可以展现你的技术成果。"/>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="bookmark" href="../images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/learn.css"/>
+    <title>css样式升华</title>
+</head>
+<body>
+    <div class="content">
+        <h1>css样式升华</h1>
+        <div>
+            <h2>CSS 语法</h2>
+            <p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明。</p>
+            <pre>selector {declaration1; declaration2; ... declarationN }</pre>
+            <p>选择器通常是您需要改变样式的 HTML 元素。</p>
+            <p>每条声明由一个属性和一个值组成。</p>
+            <p>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
+            <pre>selector {property: value}</pre>
+            <p>下面这行代码的作用是将 h1 元素内的文字颜色定义为红色，同时将字体大小设置为 14 像素。</p>
+            <p>在这个例子中，h1 是选择器，color 和 font-size 是属性，red 和 14px 是值。</p>
+            <pre>h1 {color:red; font-size:14px;}</pre>
+            <p>下面的示意图为您展示了上面这段代码的结构：</p>
+            <img src="../images/ct_css_selector.gif" alt="CSS 语法">
+            <p class="tip"><span>提示：</span>请使用花括号来包围声明。</p>
+        </div>
+        <div>
+            <h2>CSS 使用方法</h2>
+            <ol>
+                <li>内联样式</li>
+                <li>内部样式表</li>
+                <li>外部样式表</li>
+            </ol>
+            <p>内联样式</p>
+<pre>&lt;p <code>style</code>="color: sienna; margin-left: 20px"&gt;
+This is a paragraph
+&lt;/p&gt;
+</pre>
+            <p>内部样式表</p>
+<pre>&lt;head&gt;
+<code>&lt;style type="text/css"&gt;</code>
+  hr {color: sienna;}
+  p {margin-left: 20px;}
+  body {background-image: url("images/back40.gif");}
+<code>&lt;/style&gt;</code>
+&lt;/head&gt;
+</pre>
+            <p>外部样式表</p>
+<pre>&lt;head&gt;
+&lt;<code>link</code> rel="stylesheet" type="text/css" href="<code>mystyle.css</code>" /&gt;
+&lt;/head&gt;</pre>
+        </div>
+    </div>
+</body>
+</html>

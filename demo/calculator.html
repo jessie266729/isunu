@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.calculator{
+			width: 264px;
+			margin: 20px auto;
+			border: 1px solid #e0e0e0;
+		}
+		.calculator-view{
+			height: 100px;
+			border-bottom: 1px solid #e0e0e0;
+			position: relative;
+
+		}
+		.calculator-view-text{
+			position: absolute;
+			bottom: 0;
+			text-align: right;
+			width: 244px;
+		    padding: 10px;
+		    word-break: break-word;
+		}
+		.calculator-view-mark{
+			padding: 10px;
+			text-align: right;
+		}
+		.body-btn-box{
+			width: 60px;
+			height: 60px;
+			display: inline-block;
+			font-size: 16px;
+			line-height: 60px;
+    		text-align: center;
+    		cursor: pointer;
+		}
+		.body-btn-box:hover{
+			background: #cccccc;
+			color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+	<div class="calculator">
+		<div class="calculator-view">
+			<p class="calculator-view-mark" id="view_mark"></p>
+			<p class="calculator-view-text" id="view_text">0</p>
+		</div>
+		<div class="calculator-body" id="calculator_body">
+			<span class="body-btn-box">C</span>
+			<span class="body-btn-box">0</span>
+			<span class="body-btn-box">+</span>
+			<span class="body-btn-box">-</span>
+			<span class="body-btn-box">1</span>
+			<span class="body-btn-box">2</span>
+			<span class="body-btn-box">3</span>
+			<span class="body-btn-box">*</span>
+			<span class="body-btn-box">4</span>
+			<span class="body-btn-box">5</span>
+			<span class="body-btn-box">6</span>
+			<span class="body-btn-box">/</span>
+			<span class="body-btn-box">7</span>
+			<span class="body-btn-box">8</span>
+			<span class="body-btn-box">9</span>
+			<span class="body-btn-box">=</span>
+		</div>
+	</div>
+</body>
+<script>
+	var before_value = "",before_mark = "",lastClick = "";
+	var calculator = document.getElementById("calculator_body");
+	var btns = calculator.children;
+	for(var i = 0 ,l = btns.length ; i < l ; i++){
+		btns[i].onclick = clickEvent;
+	}
+	function clickEvent(){
+		var text = this.innerHTML;
+		matchMark(text);
+	}
+	function matchMark(text){
+		if((text=="+"||text=="-"||text=="*"||text=="/")&&lastClick != ""){
+			before_mark = text;
+			lastClick = text;
+			viewMark(text);
+			return;
+		}
+		switch(text){
+			case "+":
+				dealCalculator();
+				viewMark(text);
+				before_mark = text;
+				lastClick = "+";
+				break;
+			case "-":
+				dealCalculator();
+				viewMark(text);
+				before_mark = text;
+				lastClick = "-";
+				break;
+			case "*":
+				dealCalculator();
+				viewMark(text);
+				before_mark = text;
+				lastClick = "*";
+				break;
+			case "/":
+				dealCalculator();
+				viewMark(text);
+				before_mark = text;
+				lastClick = "/";
+				break;
+			case "=":
+				dealCalculator();
+				viewMark("");
+				before_mark = "";
+				lastClick = "";
+				break;
+			case "C":
+				reset();
+				viewMark("")
+				lastClick = "";
+				break;
+			default:
+				var isJoin = true;
+				if(lastClick || getNowText()=="0"){
+					isJoin = false;
+				}
+				viewText(text,isJoin);
+				if(before_mark==""){
+					before_value = getNowText();
+				}
+				lastClick = "";
+				break;
+		}
+
+	}
+	function viewMark(mark){
+		document.getElementById("view_mark").innerHTML = mark;
+	}
+	function dealCalculator(){
+		var firstText = dealNumber(before_value);
+		var secondText = dealNumber(getNowText());
+		switch (before_mark){
+			case "+":
+				before_value = add(firstText,secondText);
+				break;
+			case "-":
+				before_value = sub(firstText,secondText);
+				break;
+			case "*":
+				before_value = mul(firstText,secondText);
+				break;
+			case "/":
+				before_value = div(firstText,secondText);
+				break;
+			default:
+				break;
+		}
+		if(before_value!=""){
+			viewText(before_value,false);
+		}
+		
+	}
+	function dealNumber(num){
+		var intNum = parseInt(num);
+		if(intNum){
+			return intNum;
+		}else{
+			return 0;
+		}
+	}
+	function getNowText(){
+		return document.getElementById("view_text").innerHTML;
+	}
+	function reset(){
+		viewText("0");
+		before_value = "";
+		before_mark = "";
+	}
+	function viewText(text,isJoin){
+		if(isJoin){
+			return document.getElementById("view_text").innerHTML += text;
+		}else{
+			return document.getElementById("view_text").innerHTML = text;
+		}
+		
+	}
+	function add(firstText,secondText){
+		return firstText + secondText;
+	}
+	function sub(firstText,secondText){
+		return firstText - secondText;
+	}
+	function mul(firstText,secondText){
+		return firstText * secondText;
+	}
+	function div(firstText,secondText){
+		if(secondText){
+			return firstText / secondText;
+		}else{
+			return 0;
+		}
+		
+	}
+</script>
+</html>

@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    background: #e6e6e6;
+}
+.top-nav{
+    width: 100%;
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.nav-line{
+    height: 80px;
+    width: 1px;
+    float: left;
+    background: #888484;
+    margin: 10px 20px;
+}
+.logo{
+    width: 100px;
+    height: 100%;
+    float: left;
+    margin-left: 20px;
+}
+.logo-title{
+    width: 100px;
+    font-size: 32px;
+    padding-top: 20px;
+}
+.logo-site{
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+}
+.nav-area{
+    float: left;
+    overflow: hidden;
+    width: 839px;
+}
+.user-info{
+    height: 40px;
+}
+.nav-ul{
+    height: 50px;
+    width: 100%;
+    list-style-type: none;
+}
+.nav-ul li{
+    float: right;
+}
+.nav-ul li a{
+    line-height: 50px;
+    font-size: 20px;
+    color: #333333;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.nav-ul li a:hover{
+    color: #ffffff;
+}
+.middle-main{
+    width: 1000px;
+    margin: 0 auto 40px;
+    background: #ffffff;
+    padding: 10px;
+    overflow: hidden;
+}
+.left-area{
+    float: left;
+}
+.right-area{
+    width: 240px;
+    float: right;
+}
+.bottom-footer{
+    line-height: 22px;
+    padding: 10px 0;
+}
+.footer-text{
+    text-align: center;
+    color: #666666;
+}
+.small-box{
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.middle-box{
+    width: 730px;
+    padding: 20px;
+    font-size: 13px;
+}
+.big-box{
+    padding: 20px;
+    margin-bottom: 10px;
+    line-height: 1.54;
+}
+.mix-box{
+    overflow: hidden;
+}
+.small-box h5{
+    line-height: 27px;
+}
+.small-box a{
+    line-height: 25px;
+    display: block;
+    color: #666666;
+    overflow: hidden;
+}
+.small-box a:hover{
+    color: #999999;
+}
+.small-box a .title{
+    display: block;
+    width: 145px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.small-box a .time{
+    float: right;
+}
+.item{
+    margin: 20px 0;
+    line-height: 1.54;
+}
+.item a{
+    color: #0000CC;
+    font-weight: normal;
+    font-size: medium;
+    display: block;
+}
+.item .time{
+    color: #666666;
+}
+.icon-police{
+    display: inline-block;
+    margin: 2px 0 0 -22px;
+    position: absolute;
+}

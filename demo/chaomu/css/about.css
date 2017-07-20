@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.jc_about{
+    background: url("../images/about_bg.jpg") no-repeat fixed;
+    background-size: 100%;
+    margin-top: 4%;
+}
+.about_nav{
+    overflow: hidden;
+    position: fixed;
+    *margin-left: -255px;
+}
+.nav_tow,.nav_three{
+    margin-top: -2px;
+}
+.nav_one:hover,.nav_tow:hover,.nav_three:hover{
+    cursor: pointer;
+}
+.about_contetn{
+    overflow: hidden;
+    margin-left: 259px;
+    padding-bottom: 30px;
+
+}
+.after{
+    display: none;
+}
+.middle{
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+.chinese_intro{
+    color: #4c2b0f;
+    font-size: 13px;
+    font-family: "微软雅黑";
+    line-height: 24px;
+    padding: 30px 0;
+    border-bottom: 1px #AF9F8F solid;
+}
+.english_intro{
+    font-size: 12px;
+    color: #534437;
+    font-family: "Arial";
+    padding: 30px 0;
+    line-height: 20px;
+}
+img{
+    border: none;
+}
+.about_bot li{
+    list-style-type: none;
+    float: left;
+    font-size: 14px;
+    color: #4c2b0f;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+.about_bot{
+    margin-top: 40px;
+}
+.bot_after{
+    margin-left: 56px;
+}
+.about_house{
+    margin: 40px auto 0 auto;
+    display: block;
+}

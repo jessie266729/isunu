@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../plugin/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body class="body-container" id="body_container">
+<div class="easyui-layout main-content" id="content_main"  data-options="fit:true">
+    <div data-options="region:'north'" id="content_north" style="height:99px">
+        <div class="top-row-one">
+            <div class="logo-area">
+                <img class="logo-png" src="../images/logo.png">
+            </div>
+            <div class="menu-area" onselectstart="return false">
+                <div class="menu-one-left"><div class="arrow-left"></div></div>
+                <div class="menu-one" id="menu_one">
+                    <ul class="menu-one-ul">
+                        <li id="menu_one_li0" class="menu-one-li">
+                            <a class="index0">综合查询</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_search_0">列表填满区域</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_search_1">列表超出区域</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_search_2">右侧内容固定</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_search_3">弹出框新增</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_search_4">空数据</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_search_5">checkbox</a></li>
+                                        <li class="menu-two-li" name="menu_two_li6"><a frameId="frame_id_search_6">右侧内容固定2</a></li>
+                                        <li class="menu-two-li" name="menu_two_li7"><a frameId="frame_id_search_7">修改内容</a></li>
+                                        <li class="menu-two-li" name="menu_two_li8"><a frameId="frame_id_search_8">2表头固定</a></li>
+                                        <li class="menu-two-li" name="menu_two_li9"><a frameId="frame_id_search_9">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li10"><a frameId="frame_id_search_10">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li1" class="menu-one-li">
+                            <a class="index1">套管监测</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_jc_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_jc_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_jc_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_jc_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_jc_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_jc_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li2" class="menu-one-li">
+                            <a class="index2">铁芯监测</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_tx_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_tx_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_tx_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_tx_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_tx_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_tx_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li3" class="menu-one-li">
+                            <a class="index3">局放监测</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_jf_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_jf_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_jf_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_jf_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_jf_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_jf_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li4" class="menu-one-li">
+                            <a class="index4">图形监测</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_txjc_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_txjc_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_txjc_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_txjc_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_txjc_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_txjc_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li5" class="menu-one-li">
+                            <a class="index5">系统管理</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_xt_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_xt_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_xt_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_xt_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_xt_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_xt_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li6" class="menu-one-li">
+                            <a class="index6">系统管理</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_c_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_c_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_c_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_c_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_c_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_c_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li7" class="menu-one-li">
+                            <a class="index7">系统管理</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_j_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_j_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_j_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_j_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_j_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_j_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                        <li id="menu_one_li8" class="menu-one-li">
+                            <a class="index8">系统管理</a>
+                            <div class="menu-two hide">
+                                <div class="menu-two-left"><div class="menu-left-arrow-png"></div></div>
+                                <div class="menu-two-area">
+                                    <ul class="menu-two-ul">
+                                        <li class="menu-two-li" name="menu_two_li0"><a frameId="frame_id_zh_0">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li1"><a frameId="frame_id_zh_1">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li2"><a frameId="frame_id_zh_2">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li3"><a frameId="frame_id_zh_3">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li4"><a frameId="frame_id_zh_4">综合查询</a></li>
+                                        <li class="menu-two-li" name="menu_two_li5"><a frameId="frame_id_zh_5">综合查询</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-two-right"><div class="menu-right-arrow-png"></div></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-one-right"><div class="arrow-right"></div></div>
+                <div class="user-info" id="user_info">
+                    <img class="user-icon" src="../images/user.png">
+                    <span class="user-name">审计管理员</span>
+                    <img class="user-arrow" src="../images/user-arrow-down.png">
+                    <div class="select-list hide">
+                        <div class="user-box">
+                            <a id="login_out">注  销</a>
+                            <a>测测试试</a>
+                            <a>测  试</a>
+                            <a>测测试试</a>
+                            <a>测  试</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-row-two">
+            <div class="top-row-center">
+                <div class="top-row-width">
+                    <div class="nav-locat">当前位置：<span id="locate_menu">酒泉变电站</span><span class="locat-gap">></span><span id="locate_tree"></span></div>
+                    <div class="nav-two" id="view_time"></div>
+                </div>
+
+            </div>
+            <div class="top-hide-row"></div>
+
+        </div>
+    </div>
+    <div data-options="region:'west',split:true" id="content_west" style="width:300px;overflow-x:hidden">
+        <div class="tree-area" onselectstart="return false">
+            <div id="tree_title" class="tree-title-content">
+                <div class="title-box active" name="title0">
+                    <span class="title-text">设备层级</span>
+                    <div class="title-radius"></div>
+                </div>
+                <div class="title-box tree-single-view hide" name="title1">
+                    <span class="title-text">设备层级</span>
+                    <div class="title-radius"></div>
+                </div>
+                <div class="title-bottom">
+                    <img class="tree-title-column-radius" src="../images/tree-title-column-radius.png">
+                </div>
+            </div>
+            <div id="tree_content" class="tree-content-area">
+                <div class="tree-gap">
+                    <div id="tree_panel0" class="tree-detail">
+                        <ul id="tree_ul0"></ul>
+                        <div class="tree-line"></div>
+                        <ul id="tree_ul1"></ul>
+                    </div>
+                    <div id="tree_panel1" class="tree-detail hide">
+                        <ul id="tree_ul2"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tree-open-close"></div>
+        </div>
+    </div>
+    <div data-options="region:'center',iconCls:'icon-ok'" id="content_center" style="overflow: hidden;">
+        <div class="tree-show-hide-bg open"><div class="show-hide-arrow"></div></div>
+        <div id="tabs_list" class="easyui-tabs" style="width: 100%;height: 100%;padding-right: 20px;"></div>
+    </div>
+</div>
+<div class="footer">版权所有，国网安备995900058号CopyRight：2003-0214 State Grid Corporation Of China,All Rights Reserved.</div>
+<div id="more_search_panel" class="more-search-panel" style="display: none">
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../plugin/jquery.min.js"></script>
+<script type="text/javascript" src="../plugin/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>

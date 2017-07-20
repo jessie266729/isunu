@@ -1,0 +1,73 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #299c96;
+}
+.login-title{
+    color: #94cecb;
+    font-size: 40px;
+    text-align: center;
+    margin: 60px 0px 20px;
+}
+.login-center{
+    width: 650px;
+    height: 350px;
+    background: url("../images/login-white.png") no-repeat;
+    margin: 0 auto;
+}
+.login-input{
+    border: none;
+    margin: 8px 0 8px 45px;
+    font-size: 18px;
+    outline: none;
+    width: 220px;
+    overflow: hidden;
+}
+.login-enter-area{
+    height: 37px;
+    line-height: 37px;
+    margin: 20px 30px;
+    width: 279px;
+}
+.login-user{
+    background: url("../images/login-user.png") no-repeat;
+}
+.login-pwd{
+    background: url("../images/login-pwd.png") no-repeat;
+}
+.login-btn{
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 45px;
+    background: url("../images/login-btn-deep.png");
+    color: #ffffff;
+}
+.login-btn:hover{
+    background: url("../images/login-btn.png");
+}
+.co-logo{
+    display: inline-block;
+    float: left;
+    margin: 68px 0;
+}
+.gap-line{
+    width: 1px;
+    height: 280px;
+    float: left;
+    margin: 35px 25px;
+    border-left: 1px solid #cccccc;
+}
+.login-area{
+    float: left;
+}
+.login-tip{
+    font-family: "微软雅黑";
+    font-size: 22px;
+    margin: 40px 0 30px;
+}

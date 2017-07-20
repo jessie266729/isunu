@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>shootingStar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: #2b5ec8;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" class="myCanvas"></canvas>
+</body>
+</html>
+<script>
+    "use strict";
+    var body = document.getElementsByTagName("body");
+    var w = body[0].clientWidth;
+    var h = body[0].clientHeight;
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = w-3;
+    canvas.height = h-3;
+
+    var canvas1 = document.createElement("canvas");
+    var w1 = 80, h1 = 80;
+    canvas1.width = w1;
+    canvas1.height = h1;
+    var ctx1 = canvas1.getContext("2d");
+    ctx1.beginPath();
+    ctx1.moveTo(80,0);
+    ctx1.lineTo(0,80);
+    ctx1.strokeStyle = "#FFFFFF";
+    ctx1.lineWidth = 1;
+    ctx1.stroke();
+    ctx1.closePath();
+
+    var line = [];
+    var lineCount = 10;
+
+    var Line = function(){
+        this.speed = Math.random()*10 + 5;
+        this.x = this.oX = Math.random()*w + 500;
+        this.y = this.oY = 0 - h1;
+    };
+
+    Line.prototype.draw = function(){
+        ctx.drawImage(canvas1,this.x,this.y);
+        this.x -= this.speed;
+        this.y += this.speed;
+        if(this.y > h + 2 * h1){
+            this.x = this.oX;
+            this.y = this.oY;
+        }
+    };
+
+    for(var i = 0 ; i < lineCount ; i ++){
+        line.push(new Line());
+    }
+
+    function animation(){
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = "#2b5ec8";
+        ctx.fillRect(0, 0, w, h);
+
+        ctx.globalCompositeOperation = 'lighter';
+        for(var j = 0 ; j < lineCount ; j++){
+            line[j].draw();
+        }
+        window.requestAnimationFrame(animation);
+    }
+
+    animation();
+
+//    ctx.fillStyle = "#2b5ec8";
+//    ctx.fillRect(0, 0, w, h);
+//
+//    ctx.globalCompositeOperation = 'source-over';
+//
+//    ctx.beginPath();
+//    ctx.moveTo(80,0);
+//    ctx.lineTo(0,80);
+//    ctx.lineTo(80,80);
+//    ctx.strokeStyle = "#ffffff";
+//    ctx.lineWidth = 1;
+//    ctx.stroke();
+//    ctx.closePath();
+
+</script>

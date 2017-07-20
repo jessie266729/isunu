@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.jc_about{
+    background: url("../images/bg.jpg") no-repeat fixed;
+    background-size: 100% 100%;
+    margin-top: 4%;
+}
+.about_nav{
+    overflow: hidden;
+    position: fixed;
+    *margin-left: -255px;
+}
+.nav_tow,.nav_three{
+    margin-top: -2px;
+}
+.nav_one:hover,.nav_tow:hover,.nav_three:hover{
+    cursor: pointer;
+}
+.about_contetn{
+    overflow: hidden;
+    margin-left: 259px;
+    padding-bottom: 30px;
+}
+.middle {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+.content_honor{
+    text-align: center;
+    padding: 30px 0 20px 0;
+}
+.import_zm{
+    color: #534437;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.certificate{
+    color: #534437;
+    font-size: 16px;
+    font-family: "century gothic";
+}
+.map_honor{
+    margin-top: 40px;
+}

@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+}
+html,body{
+	color:#333333;
+	font-size:12px;
+    height: 100%;
+}
+table{
+    table-layout: fixed;
+}
+table tr{
+    background: #ffffff;
+}
+.table-list{
+	text-align:center;
+	border-left:1px solid #D8DAD9;
+	border-top: 1px solid #D8DAD9;
+	width:100%;
+    overflow: hidden;
+}
+
+.table-list td {
+	border-right:1px solid #D8DAD9;
+	border-bottom: 1px solid #D8DAD9;
+	height:30px;
+    white-space: nowrap;
+}
+.title-big{
+    background: url(../images/table-title-background.jpg);
+}
+.table-title{
+    font-weight: bold;
+    background: url(../images/table-title-background.jpg);
+}
+.table-title td{
+    cursor: pointer;
+}
+.search-area{
+    overflow: hidden;
+}
+.margin-box{
+    margin-top: 15px;
+    overflow: hidden;
+}
+.margin-top-box{
+    padding: 10px 18px 0 0;
+    overflow: hidden;
+}
+.div-table{
+	align-content:center;
+	width: 100%;
+	overflow-y: auto;
+    position: relative;
+    clear: both;
+}
+.div-parent{
+	width:100%;
+    height: 100%;
+}
+
+.div-footer{
+    height:45px;
+	height:85px\0;
+	overflow:hidden;
+	bottom: 0;
+	width: 100%;
+    position: fixed;
+    background: url("../images/panel-right-buttom.png") no-repeat;
+    background-position: bottom right;
+}
+
+.div-footer-left{
+	display:inline-block;
+	float:left;
+}
+
+
+.div-footer-right{
+	display:inline-block;
+	float:right;
+}
+
+.div-button{
+	display:inline-block;
+	background:url(../images/button.png);
+	width:46px;
+	height:22px;
+	text-align:center;
+	line-height:22px;
+	color:#FFFFFF;
+}
+.div-button:hover{
+	color:#94CECB;
+	cursor:pointer;
+}
+
+.div-page{
+	display:inline-block;
+}
+
+.go-page{
+	width:30px;
+	height:15px;
+	text-align:center;
+}
+
+.span-page{
+	color:#47A4E9;
+	text-decoration:underline;
+	font-weight:bolder;
+}
+.more-search{
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    line-height: 22px;
+    color: #0b898d;
+}
+.more-search:hover{
+    color: #666666;
+}
+.search-input .textbox .textbox-text,.search-input .textbox{
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.search-button{
+    margin: 0 20px;
+    display: block;
+    float: left;
+}
+.search-input{
+    overflow: hidden;
+    float: left;
+}
+.same-condition,.condition{
+    overflow: hidden;
+    float: left;
+    margin: 3px 15px 10px 0;
+    height: 22px;
+}
+.table-lock-title{
+    text-align: center;
+    border-left: 1px solid #D8DAD9;
+    border-top: 1px solid #D8DAD9;
+    table-layout: fixed;
+    width: 100%;
+    word-break: break-all;
+    clear: both;
+}
+.div-table .table-lock-colum{
+    border-top: none;
+}
+.table-lock-colum{
+    text-align: center;
+    border-left: 1px solid #D8DAD9;
+    border-top: 1px solid #D8DAD9;
+    table-layout: fixed;
+    word-break: break-all;
+    position: absolute;
+}
+.table-lock-content{
+    text-align: center;
+    border-left: 1px solid #D8DAD9;
+    table-layout: fixed;
+    width: 100%;
+    word-break: break-all;
+}
+.hover-row{
+    background: #E1FAFE;
+}
+.div-table .active-row{
+    background: #E1FAFE;
+}
+.table-lock-content tr:hover{
+    background: #E1FAFE;
+}
+.table-lock-content td,.table-lock-title td,.table-lock-colum td{
+    border-right: 1px solid #D8DAD9;
+    border-bottom: 1px solid #D8DAD9;
+    height: 30px;
+    white-space: nowrap;
+    line-height: 20px;
+}
+.arrow-up{
+    width: 12px;
+    height: 11px;
+    background: url("../plugin/images/datagrid_icons.png") no-repeat;
+    display: inline-block;
+}
+.arrow-down{
+    width: 12px;
+    height: 11px;
+    background: url("../plugin/images/datagrid_icons.png") no-repeat -16px 0;
+    display: inline-block;
+}
+.arrow-both{
+    width: 12px;
+    height: 11px;
+    background: url("../plugin/images/title_both.png") no-repeat;
+    display: inline-block;
+}
+.add-body{
+    width: 100%;
+}
+.add-area{
+    overflow: hidden;
+    padding: 20px;
+}
+.add-area .condition{
+    position: relative;
+}
+.add-area .condition label{
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+}
+.btn-area{
+    width: 100px;
+    margin: 0 auto 20px;
+}
+.no-content-tip{
+    line-height: 200px;
+    color: #299c96;
+    text-align: center;
+    font-size: 20px;
+}
+.update{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #299c96;
+}
+.item-update{
+    color: #299c96;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.div-footer .scroll-area{
+    width: 100%;
+    height: 35px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.div-footer .scroll-area .scroll-box{
+    height: 1px;
+}
+#table_area{
+    overflow-x: auto;
+    overflow-x: hidden\0;
+}
+#scroll_area{
+    display: none;
+    display: block\0;
+}

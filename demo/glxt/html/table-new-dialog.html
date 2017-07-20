@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>列内容少，横向填满面板</title>
+    <link href="../plugin/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="div-parent">
+    <div class="search-area" align="left" id="search_area">
+        <div class="margin-box">
+            <div id="search_input" class="search-input">
+                <div class="condition">
+                    <label>开始时间</label>
+                    <input class="easyui-datetimebox" name="begin-time"
+                           data-options="required:false" value="">
+                </div>
+                <div class="condition">
+                    <label>结束时间</label>
+                    <input class="easyui-datetimebox" name="end-time"
+                           data-options="required:false" value="">
+                </div>
+                <div class="condition">
+                    <label>性别</label>
+                    <input id="cc2" class="easyui-combobox" data-options="url:'xb.json',valueField:'id',textField:'text',panelHeight:'auto'" />
+                </div>
+                <div class="div-button same-condition search-button">搜索</div>
+                <a id="more_search_btn" class="more-search same-condition">更多条件</a>
+            </div>
+        </div>
+        <table class="table-lock-title" id="table_list" cellpadding="0" cellspacing="0">
+            <tr class="table-title" id="table_title" align="center">
+                <td style="width: 100px" title="指示器编码"><span>指示器编码</span><div class="title-status arrow-both"></div></td>
+                <td style="width: 100px" title="线路名称"><span>线路名称</span><div class="title-status arrow-both"></div></td>
+                <td style="width: 200px" title="报警时间"><span>报警时间</span><div class="title-status arrow-both"></div></td>
+                <td style="width: 100px" title="故障类型"><span>故障类型</span><div class="title-status arrow-both"></div></td>
+            </tr>
+        </table>
+    </div>
+    <div class="div-table" id="table_area">
+        <table class="table-lock-content" id="table_content" cellpadding="0" cellspacing="0">
+            <tr class="row-single" id="table_content_tr" align="center">
+                <td style="width: 100px" title="first">first</td>
+                <td style="width: 100px" title="温泉线">温泉线</td>
+                <td style="width: 200px" title="2015-05-28">2015-05-28 14:18:20</td>
+                <td style="width: 100px" title="正接地">正接地</td>
+            </tr>
+            <tr class="row-double">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-single">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-double">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-single">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-double">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-single">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-double">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-single">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-double">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-single">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-double">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+            <tr class="row-single">
+                <td title="first">first</td>
+                <td title="温泉线">温泉线</td>
+                <td title="2015-05-28">2015-05-28 14:18:20</td>
+                <td title="正接地">正接地</td>
+            </tr>
+        </table>
+    </div>
+    <div class="div-footer" id="footer_area">
+        <div class="scroll-area" id="scroll_area"><div class="scroll-box" id="scroll_box"></div></div>
+        <div class="margin-top-box">
+            <div class="div-footer-left">
+                <div class="div-button">导出</div>
+                <div class="div-button">打印</div>
+                <div class="div-button" id="add_new">添加</div>
+            </div>
+            <div class="div-footer-right">
+                <div class="div-page">共<span id="total_record" class="span-page">27</span>条记录 第<span id="current_page" class="span-page">1</span>页 共<span id="total_page" class="span-page">2</span>页</div>
+                <input id="go_page" type="text" class="go-page" onkeyup="check_go_page(this)"/>
+                <div class="div-button">GO</div>
+                <div class="div-button">首页</div>
+                <div class="div-button">上一页</div>
+                <div class="div-button">下一页</div>
+                <div class="div-button">尾页</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/jscript" src="../plugin/jquery.min.js"></script>
+<script type="text/jscript" src="../plugin/jquery.easyui.min.js"></script>
+<script type="text/jscript" src="../plugin/easyui-lang-zh_CN.js"></script>
+<script type="text/jscript" src="../js/table_new_dialog.js"></script>
