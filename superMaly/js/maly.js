@@ -1,59 +1,84 @@
-var Maly = function(){
-	this.speed=10;//初始状态速度
-	this.x = 10;//初始状态x
-	this.y = 10;//初始状态y
-	this.w = 10;
-	this.h = 10;
+var Entity = function(obj){
+	this.speed=obj.speed;//
+	this.x = obj.x;//初始状态x
+	this.y = obj.y;//初始状态y
+	this.w = obj.w;
+	this.h = obj.h;
+	this.color = obj.color;
 	this.cxt = document.getElementById('maly_canvas').getContext('2d');
+}
+var Maly = function(obj){
+	Entity.call(this,obj);
 }
 Maly.prototype.draw = function(){
-	this.cxt.fillStyle="green";
-	this.cxt.fillRect(this.x,this.y,this.x+this.w,this.y+this.h); 
+	this.cxt.fillStyle=this.color;
+	this.cxt.fillRect(this.x,this.y,this.w,this.h); 
 };
-var Bk = function(){
-	this.cxt = document.getElementById('maly_canvas').getContext('2d');
-	this.w = 200;
-	this.h = 200;
+
+var Bk = function(obj){
+	Entity.call(this,obj);
 }
 Bk.prototype.draw = function(){
-	this.cxt.fillStyle="#FF0000";
-	this.cxt.fillRect(0,0,this.w,this.h); 
+	this.cxt.fillStyle=this.color;
+	this.cxt.fillRect(this.x,this.y,this.x+this.w,this.y+this.h); 
+}
+function creatMaly(){
+	var maly = new Maly({
+		speed:10,
+		w:10,
+		h:10,
+		x:10,
+		y:10,
+		color:'yellow'
+	});
+	return maly;
+}
+function creatBk(){
+	var bk = new Bk({
+		speed:0,
+		w:500,
+		h:500,
+		x:0,
+		y:0,
+		color:'#2b5ec8'
+	});
+	return bk;
+}
+function keycodeEvent(maly,bk){
+	document.onkeydown=function(e){
+		if(e && e.keyCode==65){ // a
+			//要做的事情
+			maly.x -= maly.speed;
+		}
+		if(e && e.keyCode==68){ // d
+			//要做的事情
+			maly.x += maly.speed;
+		}            
+		if(e && e.keyCode==87){ // w
+			//要做的事情
+			maly.y -= maly.speed;
+		}         
+		if(e && e.keyCode==83){ // s
+			//要做的事情
+			maly.y += maly.speed;
+		}
+		bk.draw();
+		maly.draw();
+	}; 
 }
 function start(){
-	var maly = new Maly();
-	var bk = new Bk();
+	//create maly entity
+	var maly = creatMaly();
+	//create backgroud entity
+	var bk = creatBk();
+	//draw backgroud
 	bk.draw();
+	//draw maly
 	maly.draw();
+	//add keycode event
+	keycodeEvent(maly,bk);
 }
 function init(){
 	start();
 }
 init();
-
-
-
-//封装父类
-// (function(){
-// 	var n = "Lee";
-// 	function person(name){
-// 		this.name = name;
-// 	}
-// 	person.prototype.say = function(){
-// 		alert("hello"+this.name+n);
-// 	}
-// 	window.person = person;
-// }());
-// (function(){
-// 	function student(name){
-// 		this.name = name;
-// 	}
-// 	student.prototype = new person();
-// 	var superSay = student.prototype.say;
-// 	student.prototype.say = function(){
-// 		superSay.call(this);
-// 		alert("stu-hello"+this.name);
-// 	}
-// 	window.student = student;
-// }())
-// var s = new student("jessie");
-// s.say();

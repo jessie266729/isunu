@@ -49,11 +49,13 @@ pre{
 .content p{
     margin: 12px 0 0 0;
     line-height: 150%;
+    font-size: 14px;
 }
 .content ul,.content ol{
     margin-top: 10px;
     margin-left: 35px;
     margin-bottom: 0;
+    font-size: 14px;
 }
 .content li{
     margin-top: 3px;
