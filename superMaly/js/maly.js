@@ -19,8 +19,13 @@ var Bk = function(obj){
 	Entity.call(this,obj);
 }
 Bk.prototype.draw = function(){
-	this.cxt.fillStyle=this.color;
-	this.cxt.fillRect(this.x,this.y,this.x+this.w,this.y+this.h); 
+	//start x,start y,end x,end y
+	var grd=this.cxt.createLinearGradient(this.x,this.y,this.x,this.y+this.h);
+	grd.addColorStop(0,"#46a3ff");
+	grd.addColorStop(0.4,"#d2e9ff");
+	grd.addColorStop(1,"#d2e9ff");
+	this.cxt.fillStyle=grd;
+	this.cxt.fillRect(this.x,this.y,this.w,this.h); //start x,start y,width,height
 }
 function creatMaly(){
 	var maly = new Maly({
