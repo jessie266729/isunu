@@ -14,6 +14,12 @@ Maly.prototype.draw = function(){
 	this.cxt.fillStyle=this.color;
 	this.cxt.fillRect(this.x,this.y,this.w,this.h); 
 };
+var Cloud = function(obj){
+	Entity.call(this,obj);
+}
+Cloud.prototype.draw=function(){
+	this.cxt.beginPath();
+}
 
 var Bk = function(obj){
 	Entity.call(this,obj);
