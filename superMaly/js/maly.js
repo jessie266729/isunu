@@ -22,17 +22,6 @@ Maly.prototype.draw = function(){
 	this.ctx.fillStyle=this.color;
 	this.ctx.fillRect(this.x,this.y,this.w,this.h); 
 };
-function createMaly(){
-	var maly = new Maly({
-		speed:10,
-		w:10,
-		h:10,
-		x:10,
-		y:10,
-		color:'yellow'
-	});
-	return maly;
-}
 var Cloud = function(obj){
 	Entity.call(this,obj);
 }
@@ -83,18 +72,6 @@ Cloud.prototype.draw1=function(){
 	this.ctx.fillStyle=this.color;
 	this.ctx.fill();
 }
-function createCloud(){
-	var cloud = new Cloud({
-		speed:10,
-		w:200,
-		h:100,
-		x:windowW-300,
-		y:100,
-		color:'#ffffff'
-	});
-	return cloud;
-}
-
 var Bk = function(obj){
 	Entity.call(this,obj);
 	this.canvas.width = this.w;
@@ -109,7 +86,46 @@ Bk.prototype.draw = function(){
 	this.ctx.fillStyle=grd;
 	this.ctx.fillRect(this.x,this.y,this.w,this.h); //start x,start y,width,height
 }
-
+var Grand = function(obj){
+	Entity.call(this,obj);
+}
+Grand.prototype.draw = function(){
+	this.ctx.fillStyle=this.color;
+	this.ctx.fillRect(this.x,this.y,this.w,this.h); 
+}
+function createGrand(){
+	var grand = new Grand({
+		speed:10,
+		w:2500,
+		h:200,
+		x:0,
+		y:windowH-200,
+		color:'#afaf61'
+	});
+	return grand;
+}
+function createMaly(){
+	var maly = new Maly({
+		speed:2,
+		w:100,
+		h:100,
+		x:10,
+		y:windowH-300,
+		color:'yellow'
+	});
+	return maly;
+}
+function createCloud(){
+	var cloud = new Cloud({
+		speed:10,
+		w:200,
+		h:100,
+		x:windowW-300,
+		y:100,
+		color:'#ffffff'
+	});
+	return cloud;
+}
 function createBk(){
     var width = windowW,
     height = windowH-4;
@@ -123,42 +139,39 @@ function createBk(){
 	});
 	return bk;
 }
-function keycodeEvent(maly,bk){
+function start(){
+	bk.draw();
+	maly.draw();
+	cloud.draw1();
+	grand.draw();
+	window.requestAnimationFrame(start);
+}
+
+function keyEvent(){
 	document.onkeydown=function(e){
 		if(e && e.keyCode==65){ // a
-			//要做的事情
 			maly.x -= maly.speed;
+			grand.x+=grand.speed;
 		}
 		if(e && e.keyCode==68){ // d
-			//要做的事情
 			maly.x += maly.speed;
+			grand.x-=grand.speed;
 		}            
 		if(e && e.keyCode==87){ // w
-			//要做的事情
-			maly.y -= maly.speed;
+			maly.y -= maly.speed*5;
+
 		}         
 		if(e && e.keyCode==83){ // s
-			//要做的事情
-			maly.y += maly.speed;
 		}
-		bk.draw();
-		maly.draw();
 	}; 
 }
-function start(){
-	//create backgroud entity and draw backgroud
-	var bk = createBk();
-	bk.draw();
-	//create maly entity and draw maly
-	var maly = createMaly();
-	maly.draw();
-	//create cloud entity and draw cloud
-	var cloud = createCloud();
-	cloud.draw1();
-	//add keycode event
-	keycodeEvent(maly,bk);
-}
-function init(){
-	start();
-}
-init();
+
+//create backgroud entity and draw backgroud
+var bk = createBk();
+//create maly entity and draw maly
+var maly = createMaly();
+//create cloud entity and draw cloud
+var cloud = createCloud();
+var grand  = new createGrand();
+start();
+keyEvent();
